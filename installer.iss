@@ -10,11 +10,11 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 [Files]
-Source: "target\release\archy-browser.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "target\release\argon-browser.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{autoprograms}\Archy Browser"; Filename: "{app}\archy-browser.exe"
-Name: "{autodesktop}\Archy Browser"; Filename: "{app}\archy-browser.exe"; Tasks: desktopicon
+Name: "{autoprograms}\Archy Browser"; Filename: "{app}\argon-browser.exe"
+Name: "{autodesktop}\Archy Browser"; Filename: "{app}\argon-browser.exe"; Tasks: desktopicon
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional icons:"
