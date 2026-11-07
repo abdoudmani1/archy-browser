@@ -1,0 +1,25 @@
+name: Build Windows Installer
+
+on:
+  push:
+    branches: [ "windows-mac-port" ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Build Rust Binary
+        run: cargo build --release
+
+      - name: Compile Windows Installer
+        run: |
+          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Archy-Windows-Installer
+          path: Archy-Installer.exe

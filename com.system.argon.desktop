@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Argon
+GenericName=Web Browser
+Comment=Ultra-minimalist Wayland web browser
+Exec=argon-browser %U
+Icon=argon-logo
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
