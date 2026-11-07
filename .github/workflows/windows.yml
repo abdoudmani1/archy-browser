@@ -16,7 +16,7 @@ jobs:
 
       - name: Compile Windows Installer
         run: |
-          "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
 
       - name: Upload Installer
         uses: actions/upload-artifact@v4
