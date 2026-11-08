@@ -4,7 +4,32 @@ use tao::{
     window::WindowBuilder,
 };
 use wry::WebViewBuilder;
+use std::env;
+use std::path::PathBuf;
+#[cfg(target_os = "windows")]
+use wry::WebViewBuilderExtWindows; // Import the Windows-specific extension
 
+// ... inside your main function ...
+
+// 1. Create a path to the user's writable Local AppData folder
+let mut data_dir = env::temp_dir();
+if let Ok(local_app_data) = env::var("LOCALAPPDATA") {
+    data_dir = PathBuf::from(local_app_data);
+}
+data_dir.push("ArchyBrowser"); // This creates %LOCALAPPDATA%\ArchyBrowser
+
+// 2. Apply the data directory to your WebViewBuilder
+#[cfg(target_os = "windows")]
+let builder = wry::WebViewBuilder::new(&window)
+    .with_data_directory(data_dir);
+
+#[cfg(not(target_os = "windows"))]
+let builder = wry::WebViewBuilder::new(&window);
+
+let webview = builder
+    .with_url("https://duckduckgo.com") // Replace with your actual URL/HTML
+    .build()?;
+    
 fn main() -> wry::Result<()> {
     let event_loop = EventLoop::new();
 
