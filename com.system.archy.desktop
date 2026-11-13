@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Archy
+GenericName=Web Browser
+Comment=Ultra-minimalist Wayland web browser
+Exec=archy-browser %U
+Icon=argon-logo
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+Path=
+StartupNotify=false
