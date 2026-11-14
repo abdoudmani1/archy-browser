@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04 # Older Ubuntu ensures broader AppImage compatibility
+    runs-on: ubuntu-latest # Older Ubuntu ensures broader AppImage compatibility
 
     steps:
     - uses: actions/checkout@v3
