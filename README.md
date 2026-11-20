@@ -5,9 +5,8 @@ An ultra-minimalist, insanely lightweight Wayland web browser built in Rust and 
 Archy is designed to be fast, stay out of your way, and aggressively optimize its own memory usage based on your system's hardware. Whether you are running on a 4GB potato or a 16GB workstation, Archy automatically scales its background processes, media handling, and caching to give you the best possible browsing experience without hoarding your RAM.
 
 ![GitHub Release](https://img.shields.io/github/v/release/abdoudmani1/archy-browser?style=flat-square)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/abdoudmani1/archy-browser/?style=flat-square)
 ![Rust](https://img.shields.io/badge/Language-Rust-orange?style=flat-square)
-![Linux](https://img.shields.io/badge/Platform-Linux-blue?style=flat-square)
+
 
 ---
 
